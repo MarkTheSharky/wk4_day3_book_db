@@ -4,11 +4,17 @@
 
 {% for book in all_books %}
     
-    <div class=list>
+    <div class=content>
         {{ book.title }} by {{ book.author.name }}
     </div>
 
-
+    <div class='buttons'>
+        <form action="/books/{{ book.id }}/delete" method="POST" class="delete-form">
+            <button type="submit" class="trash-button">
+              <i class="fa fa-trash-o fa-3x" aria-hidden="true"></i>
+            </button>
+          </form>
+    </div>
 {% endfor %}
 
 {% endblock content %}
