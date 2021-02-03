@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+{% for book in all_books %}
+    
+    <div class=list>
+        {{ book.title }} by {{ book.author.name }}
+    </div>
+
+
+{% endfor %}
+
+{% endblock content %}
